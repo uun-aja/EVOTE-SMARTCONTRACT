@@ -1,0 +1,56 @@
+.input {
+    margin-bottom: 1rem;
+  }
+  
+  .input p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  
+  .input__box {
+    width: 100%;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* subtle shadow */
+    transition: all 0.3s ease; /* smooth transition for hover/focus effect */
+  }
+  
+  .input__box:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* shadow on hover */
+    border: 1px solid #007bff; /* change border on hover */
+  }
+  
+  .input__box input {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    outline: none;
+    padding: 0.5rem;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* smooth transition */
+  }
+  
+  .input__box input:focus {
+    border: 1px solid #007bff; /* blue border on focus */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.25); /* light blue glow on focus */
+  }
+  
+  .input__box input::placeholder {
+    color: rgb(100, 100, 100);
+    font-weight: 600;
+    text-transform: capitalize;
+    opacity: 0.7; /* slightly faded placeholder */
+    transition: opacity 0.3s ease;
+  }
+  
+  .input__box input:focus::placeholder {
+    opacity: 1; /* make placeholder more visible on focus */
+  }
+  

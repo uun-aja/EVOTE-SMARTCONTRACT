@@ -1,0 +1,64 @@
+import React from "react";
+import Image from "next/image"; // Import Next.js Image component
+
+// Internal Import
+import Style from "./Card.module.css";
+
+const Card = ({ candidateArray = [], giveVote }) => {
+  return (
+    <div className={Style.card}>
+      {candidateArray.length > 0 ? (
+        candidateArray.map((el, i) => {
+          // Ensure array contains valid data
+          const [name, id, address, _, voteCount, image] = Array.isArray(el) ? el : [];
+
+          const validId = id && typeof id.toNumber === "function" ? id.toNumber() : "N/A";
+          const validAddress = address && typeof address === "string" ? address.slice(0, 30) : "Invalid address";
+          const validVotes = voteCount && voteCount._isBigNumber ? voteCount.toNumber() : voteCount || 0;
+
+          return (
+            <div key={validId} className={Style.card_box}>
+              {/* Image Section */}
+              <div className={Style.images}>
+                {image ? (
+                  <Image src={image} alt={`Profile of ${name || "Unknown"}`} width={100} height={100} /> // Use Next.js Image
+                ) : (
+                  <p>No Image Available</p>
+                )}
+              </div>
+
+              {/* Candidate Information */}
+              <div className={Style.card_info}>
+                <h2>
+                  {name || "Unknown"} #{validId}
+                </h2>
+                <p>Name: {name || "Unknown"}</p>
+                <p>Address: {validAddress}...</p>
+                <p className={Style.total}>Total Votes</p>
+              </div>
+
+              {/* Vote Count */}
+              <div className={Style.card_vote}>
+                <p>{validVotes}</p>
+              </div>
+
+              {/* Vote Button */}
+              <div className={Style.card_button}>
+                <button
+                  onClick={() => giveVote({ address })}
+                  disabled={validAddress === "Invalid address"}
+                >
+                  Beri Vote
+                </button>
+              </div>
+            </div>
+          );
+        })
+      ) : (
+        <p className={Style.placeholder}>No candidates available</p>
+      )}
+    </div>
+  );
+};
+
+export default Card;

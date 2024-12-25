@@ -1,0 +1,15 @@
+.vote_Status {
+    background-color:  #020c36; /* Warna ungu sesuai tema */
+    padding: 0.5rem 1rem; /* Padding untuk memberikan ruang di dalam elemen */
+    font-size: 1.3rem; /* Ukuran font yang sesuai untuk keterbacaan */
+    color: #fff; /* Teks berwarna putih untuk kontras yang jelas */
+    font-weight: 700; /* Menebalkan teks agar lebih menonjol */
+    border-radius: 0.3rem; /* Membuat sudut sedikit melengkung untuk tampilan yang lebih lembut */
+    display: inline-block; /* Membuat elemen menyesuaikan ukuran berdasarkan konten */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Menambah efek transisi untuk interaktivitas */
+}
+
+.vote_Status:hover {
+    background-color: #0c48aa; /* Warna lebih gelap saat hover untuk memberi feedback visual */
+    transform: translateY(-3px); /* Sedikit mengangkat elemen saat di-hover */
+}

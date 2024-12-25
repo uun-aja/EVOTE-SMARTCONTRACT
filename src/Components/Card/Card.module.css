@@ -1,0 +1,98 @@
+.card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem; /* Reduce the gap between cards */
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.card_box {
+  background-color: #020c36; /* Dark background */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Light shadow for a modern look */
+  color: #f5f5f5; /* Light text */
+  text-align: center;
+  overflow: hidden;
+  border-radius: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  padding: 0.2rem; /* Reduced padding inside the card */
+  min-height: 250px; /* Set a minimum height for consistency */
+}
+
+.card_box:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: #1c1c2a;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 2px solid #007bff; /* Blue border */
+}
+
+.card_info {
+  line-height: 1.5;
+  padding: 0.5rem 0;
+}
+
+.card_info h2 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.card_info p {
+  color: #d1d1d1;
+  font-size: 0.95rem; /* Reduced font size for description */
+  margin-bottom: 1rem;
+}
+
+.vote_Status {
+  font-size: 1rem; /* Reduced size for better fit */
+  color: #007bff;
+  font-weight: 600;
+}
+
+.card_button {
+  margin-top: 0.8rem;
+}
+
+.card_button button {
+  background-color: #007bff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0.5rem 1rem; /* Reduced padding for a smaller button */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card_button button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 35em) {
+  .card {
+    grid-template-columns: 1fr; /* Stack the cards on smaller screens */
+  }
+  .card_box {
+    min-height: 220px; /* Reduce the minimum height for smaller devices */
+  }
+  .card_info h2 {
+    font-size: 1.1rem; /* Adjust title font size for mobile */
+  }
+  .card_info p {
+    font-size: 0.9rem; /* Adjust paragraph font size for mobile */
+  }
+  .card_button button {
+    font-size: 0.95rem; /* Adjust button font size for mobile */
+    padding: 0.45rem 0.9rem; /* Adjust padding for mobile */
+  }
+}

@@ -1,0 +1,111 @@
+/* Navbar styling */
+.navbar {
+    width: 100%;
+    height: 5rem;
+    background: linear-gradient(45deg, #1b08e8, #231e39);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    color: white;
+  }
+  
+  .title {
+    cursor: pointer;
+  }
+  
+  .navbar_box {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .connect {
+    position: relative;
+  }
+  
+  .connect_button {
+    background: linear-gradient(45deg, #1b08e8, #1225d2);
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.4rem;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .connect_button:hover {
+    background: linear-gradient(45deg, #1225d2, #1b08e8);
+    transform: scale(1.1);
+  }
+  
+  .navigation {
+    position: absolute;
+    background: #1225d2;
+    padding: 1rem;
+    width: 15rem;
+    top: 3.5rem;
+    left: 0;
+    border-radius: 0.4rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1111;
+  }
+  
+  .navigation p {
+    margin: 0.5rem 0;
+  }
+  
+  .navigation p a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .navigation p a:hover {
+    color: #ffdd00;
+  }
+  
+  .connect_flex {
+    display: flex;
+    align-items: center;
+  }
+  
+  .connect span {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    cursor: pointer;
+  }
+  
+  .message_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2rem;
+    background-color: rgba(26, 29, 217, 0.95);
+    color: white;
+    border-radius: 1rem;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navbar_box {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .navigation {
+      width: 12rem;
+    }
+  
+    .connect_button {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+  }
+  
